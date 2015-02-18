@@ -1,14 +1,17 @@
+<% if user_signed_in? %>
+  <li><%= link_to 'Account', edit_user_registration_path %></li>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+<% else %>
 <div class="jumbotron">
-  <h1>Welcome</h1>
-  <p>It's time for you to give evaluations about <strong>Your</strong>
-    professors Ipsum aperiam ratione sunt dignissimos impedit sit! Totam
-    accusantium sed sint expedita fugiat totam sequi quidem doloribus
-    consequatur. Accusamus excepturi cumque esse provident blanditiis. Officia
+    <h1>Welcome</h1>
+    <p>It's time for you to give evaluations about <strong>Your</strong>
+      professors Ipsum aperiam ratione sunt dignissimos impedit sit! Totam
+      accusantium sed sint expedita fugiat totam sequi quidem doloribus
+      consequatur. Accusamus excepturi cumque esse provident blanditiis. Officia
     suscipit possimus aperiam minus sit.
   </p>
   <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
-
 
 <div class="container">
   <div class="row clearfix">
@@ -32,3 +35,4 @@
     </div>
   </div>
 </div>
+<% end %>
