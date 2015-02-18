@@ -1,38 +1,52 @@
 <% if user_signed_in? %>
-  <li><%= link_to 'Account', edit_user_registration_path %></li>
-  <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <div id="imaginary_container">
+          <div class="input-group stylish-input-group">
+            <input type="text" class="form-control"  placeholder="Search" >
+            <span class="input-group-addon">
+              <button type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 <% else %>
-<div class="jumbotron">
+  <div class="jumbotron">
     <h1>Welcome</h1>
     <p>It's time for you to give evaluations about <strong>Your</strong>
       professors Ipsum aperiam ratione sunt dignissimos impedit sit! Totam
       accusantium sed sint expedita fugiat totam sequi quidem doloribus
       consequatur. Accusamus excepturi cumque esse provident blanditiis. Officia
-    suscipit possimus aperiam minus sit.
-  </p>
-  <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+      suscipit possimus aperiam minus sit.
+    </p>
+    <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+  </div>
 
-<div class="container">
-  <div class="row clearfix">
-    <div class="col-md-12 column">
-      <div class="row clearfix">
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-4 column">
-          <a href="/users/sign_in" class="btn btn-info btn-lg btn-block" type="button">Sign In</a>
-        </div>
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-1 column">
-        </div>
-        <div class="col-md-4 column">
-          <a href="/users/sign_up" class="btn btn-primary btn-lg btn-block" type="button">Sign Up</a>
-        </div>
-        <div class="col-md-1 column">
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <div class="row clearfix">
+          <div class="col-md-1 column">
+          </div>
+          <div class="col-md-4 column">
+            <a href="/users/sign_in" class="btn btn-info btn-lg btn-block" type="button">Sign In</a>
+          </div>
+          <div class="col-md-1 column">
+          </div>
+          <div class="col-md-1 column">
+          </div>
+          <div class="col-md-4 column">
+            <a href="/users/sign_up" class="btn btn-primary btn-lg btn-block" type="button">Sign Up</a>
+          </div>
+          <div class="col-md-1 column">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 <% end %>
