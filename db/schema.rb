@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218063842) do
+ActiveRecord::Schema.define(version: 20150218095410) do
 
   create_table "professors", force: :cascade do |t|
-    t.string   "username"
+    t.string   "name"
     t.string   "department"
-    t.string   "school"
+    t.integer  "school_id"
+    t.string   "school_name"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "professors", ["school_id"], name: "index_professors_on_school_id"
+
+  create_table "schools", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
